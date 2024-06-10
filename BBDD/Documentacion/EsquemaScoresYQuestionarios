@@ -1,0 +1,34 @@
+(Questionaries)Cuestionario 1(Restaurante OpinApp):
+    -(mapQuestionaries)informacion libre
+        -(mapQuestions)pregunta 1
+        -(mapQuestions)pregunta 2
+        -(mapQuestions)pregunta 3
+    -(mapQuestionaries)calidad
+        -(mapQuestions)pregunta 4
+        -(mapQuestions)pregunta 5
+        -(mapQuestions)pregunta 6
+    -(mapQuestionaries)atencion
+        -(mapQuestions)pregunta 7
+        -(mapQuestions)pregunta 8
+        -(mapQuestions)pregunta 9
+    -(mapQuestionaries)comodidad
+        -(mapQuestions)pregunta 10
+        -(mapQuestions)pregunta 11
+        -(mapQuestions)pregunta 12
+    -(mapQuestionaries)opinion libre
+        -(mapQuestions)pregunta generica texto libre
+
+Scores(Restaurante OpinApp):
+    -informacion libre(preguntas 1,2,3)
+    -calidad(preguntas 4,5,6)
+    -atencion(preguntas 7,8,9)
+    -comodidad(preguntas 10,11,12)
+    -sentimiento del cliente(analisis del texto libre)
+    -global
+        -informacion libre
+        -calidad
+        -atencion
+        -comodidad
+        -sentimiento del cliente
+
+#score esta compuesto por preguntas, o por otros scores 

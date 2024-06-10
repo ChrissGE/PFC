@@ -1,0 +1,5 @@
+Al insertar un ticket comprobar que hay stock y que los puntos se 
+pueden gastar en ese caso actualizar los puntos del usuario y el 
+stock del producto(trg_insertar_ticket)
+
+Al insertar una review se actualizan los puntos del usuario(trg_insertar_review)

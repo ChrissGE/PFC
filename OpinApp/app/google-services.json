@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "670051286413",
+    "project_id": "opinapp-1d6bc",
+    "storage_bucket": "opinapp-1d6bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670051286413:android:132b43937c470f7e05d1c4",
+        "android_client_info": {
+          "package_name": "com.example.opinapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "670051286413-i1jknnu90toncovc9ja2qn7rnvi0do5u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUbJ8EecKVkfYg5B3hPNIUnb4gyTf-CnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "670051286413-i1jknnu90toncovc9ja2qn7rnvi0do5u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

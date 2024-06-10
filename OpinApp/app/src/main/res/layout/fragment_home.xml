@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#203b59"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="10dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:background="#736D6D"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/roundButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#736D6D"
+            android:iconifiedByDefault="false" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/roundButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/rounded_button_background"
+        android:scaleType="fitCenter"
+        android:contentDescription="Foto de perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="25dp"/>
+
+    <ImageButton
+        android:id="@+id/qr_scanner"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/qr_scanner"
+        android:contentDescription="Foto de perfil"
+        android:onClick="showPopupMenu"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:fontFamily="sans-serif-medium"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/colorControlNormal"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <ImageView
+        android:id="@+id/imageViewDrawable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coins"
+        app:layout_constraintBottom_toBottomOf="@id/textViewPoints"
+        app:layout_constraintStart_toEndOf="@+id/textViewPoints"
+        app:layout_constraintTop_toTopOf="@id/textViewPoints"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCompanies"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:background="#203b59"
+        android:elevation="15dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/qr_scanner"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mapCardView"
+        android:layout_width="367dp"
+        android:layout_height="267dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPoints"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="16dp"
+        android:background="#203b59">
+
+        <org.osmdroid.views.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        </org.osmdroid.views.MapView>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRecentReviews"
+        android:layout_width="326dp"
+        android:layout_height="209dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="#203b59"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapCardView"
+        app:layout_constraintVertical_bias="0.195" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.OpinApp" parent="Theme.Design.NoActionBar"></style>
+
+    <style name="Theme.OpinApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.OpinApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.OpinApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="BottomNavigationTheme" parent="Theme.Design.NoActionBar">
+        <!-- Cambiar el color de los íconos -->
+        <item name="colorOnPrimary">#fbd008</item>
+    </style>
+
+</resources>

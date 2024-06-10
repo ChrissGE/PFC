@@ -1,0 +1,11 @@
+<div class="review-list">
+  <div *ngFor="let review of reviews" class="review-card">
+    <h3>{{ review.name }} <span class="username">({{ review.username }})</span></h3>
+    <div class="rating">
+      <span *ngFor="let star of [1, 2, 3, 4, 5]; let i = index" class="star" [ngClass]="{'filled': i < review.rating}">★</span>
+    </div>
+    <p>{{ review.comment }}</p>
+    <small>{{ review.date }}</small>
+  </div>
+</div>
+

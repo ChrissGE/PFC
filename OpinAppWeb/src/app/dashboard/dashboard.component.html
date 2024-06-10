@@ -1,0 +1,63 @@
+<div class="dashboard">
+  <div class="dashboard-header">
+    <div class="logo-company-container">
+      <h1 class="company-name">{{ companyName }}</h1>
+    </div>
+    <div class="global-score">
+      <h2>Score Global</h2>
+      <div class="score-circle" [style.color]="color(scoreGlobal)">
+        <svg width="100" height="100" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="40" fill="none" [style.stroke]="color(scoreGlobal)" stroke-width="10" [style.strokeDasharray]="getStrokeArray(scoreGlobal)" transform="rotate(-90 50 50)"></circle>
+        </svg>
+        <span class="score-value">{{ scoreGlobal }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="dashboard-content">
+    <div class="dashboard-general">
+      <h2 class="titulo-panel">Datos Generales</h2>
+      <table>
+        <tr>
+          <td>Email:</td>
+          <td>{{ email }}</td>
+        </tr>
+        <tr>
+          <td>Dirección:</td>
+          <td>{{ direccion }}</td>
+        </tr>
+        <tr>
+          <td>CIF:</td>
+          <td>{{ cif }}</td>
+        </tr>
+        <tr>
+          <td>Teléfono de contacto:</td>
+          <td>{{ tlfn }}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="additional-scores">
+      <h2 class="titulo-panel">Otros Scores</h2>
+      <table>
+        <tr *ngFor="let score of scoresData; let i = index">
+          <td>{{ score.name }}</td>
+          <td *ngIf="i % 2 === 0 && scoresData[i+1]">
+            <div class="score-circle" [style.color]="color(score.mark)">
+              <svg width="100" height="100" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" fill="none" [style.stroke]="color(score.mark)" stroke-width="10" [style.strokeDasharray]="getStrokeArray(score.mark)" transform="rotate(-90 50 50)"></circle>
+              </svg>
+              <span class="score-value">{{ score.mark }}</span>
+            </div>
+          </td>
+          <td *ngIf="i % 2 !== 0 || !scoresData[i+1]">
+            <div class="score-circle" [style.color]="color(score.mark)">
+              <svg width="100" height="100" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" fill="none" [style.stroke]="color(score.mark)" stroke-width="10" [style.strokeDasharray]="getStrokeArray(score.mark)" transform="rotate(-90 50 50)"></circle>
+              </svg>
+              <span class="score-value">{{ score.mark }}</span>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

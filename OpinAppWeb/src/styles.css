@@ -1,0 +1,11 @@
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+:root{
+  color-scheme: dark;
+  background-color:  #203b59;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}

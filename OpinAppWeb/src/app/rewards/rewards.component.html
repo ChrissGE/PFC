@@ -1,0 +1,48 @@
+<div class="rewards">
+  <div class="agregar">
+    <button class="add-reward" (click)="openRewardModal()">
+      <i class="fas fa-plus-square" aria-hidden="true"></i> Añadir reward
+    </button>
+  </div>
+  <ul class="reward-list">
+    <li class="reward-item" *ngFor="let reward of rewardsData; let i = index">
+      <button
+        class="borrar fas fa-times"
+        aria-hidden="true"
+        (click)="borrarReward(i)"
+      ></button>
+      <img [src]="reward.image" alt="reward_image" />
+      <span class="reward-description">{{reward.description.toUpperCase()}}</span>
+      <span class="reward-points">{{ reward.points }} puntos.</span>
+    </li>
+  </ul>
+</div>
+
+<div class="modal-background" *ngIf="showModal">
+  <div class="modal-container">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="reward-form-label">Añadir Reward</h5>
+        <button type="button" class="close fas fa-times" data-dismiss="modal" aria-label="Close" (click)="closeRewardModal()"></button>
+      </div>
+      <form>
+        <div class="form-group">
+          <label for="rewardImage">Imagen:</label>
+          <input type="file" class="form-control-file" id="rewardImage" accept="image/*" required [(ngModel)]="newReward.image" name="newReward.image">
+        </div>
+        <div class="form-group">
+          <label for="rewardName">Nombre:</label>
+          <textarea class="form-control" id="rewardName" rows="3" required [(ngModel)]="newReward.description" name="newReward.description"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="rewardPoints">Puntos:</label>
+          <input type="number" class="form-control" id="rewardPoints" required [(ngModel)]="newReward.points" name="newReward.points">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="closeRewardModal()">Cancelar</button>
+          <button type="button" class="btn btn-primary" (click)="saveReward()">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

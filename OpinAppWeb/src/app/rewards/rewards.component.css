@@ -1,0 +1,153 @@
+.add-reward {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #1e2839;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.add-reward i{
+  margin-right: 0.5rem;
+}
+
+.reward-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+
+.reward-item{
+  height: 20rem;
+  width: 20rem;
+  border-radius: 1rem;
+  border: 1px solid whitesmoke;
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  color:whitesmoke;
+  text-align: center;
+  font-size: 30px;
+  position: relative;
+}
+
+.borrar{
+  display: flex;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0.5rem;
+  margin-left: 90%;
+  position: absolute;
+  /* right: 10px; */
+}
+.borrar:hover{
+  color: red;
+}
+
+.reward-description {
+  font-size: 36px; /* Tamaño de fuente más grande para el nombre */
+}
+
+.reward-points {
+  font-size: 26px; /* Tamaño de fuente más pequeño para los puntos */
+  margin-top: 0.2rem; /* Espacio entre el nombre y los puntos */
+}
+
+.modal-background {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  background-color: #1e2839; /* Cambia el color de fondo del modal al mismo color que el botón */
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 10px;
+}
+
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-title{
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 30px;
+  color: #aaa;
+  background: none;
+  border: none;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 36px;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  border-top: none;
+  text-align: right;
+}
+.modal-footer button {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.modal-footer button:first-child {
+  margin-right: 10px;
+}
+
+.form-group {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-control {
+  width: 100%;
+  margin: 0 auto;
+}

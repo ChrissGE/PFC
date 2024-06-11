@@ -1,0 +1,4 @@
+Carpeta BBDD- todo lo relacionado con la Base de Datos
+Carpeta OpinApp - proyecto de Android 
+Carpeta OpinAppWeb- proyecto de Angular
+Carpeta Servidor - todos los archivos necesarios para el Servidor
